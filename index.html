@@ -25,13 +25,13 @@
     </div>
     <script>
       var MyPlugin = {
-         Ismobile: function()
-         {
-              return UnityLoader.SystemInfo.mobile;
-         }
+            IsMobile: function()
+            {
+                return UnityLoader.SystemInfo.mobile;
+            }
       };
-      mergeInto(LibraryManager.library, MyPlugin);
 
+      mergeInto(LibraryManager.library,MyPlugin);
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
