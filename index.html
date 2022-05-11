@@ -54,6 +54,13 @@
         }
         updateBannerVisibility();
       }
+      var lockFunction =  window.screen.orientation.lock;
+        if (lockFunction.call(window.screen.orientation, 'landscape')) {
+           console.log('Orientation locked')
+        } else {
+            console.error('There was a problem in locking the orientation')
+        }
+      };
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/buil.C.loader.js";
