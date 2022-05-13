@@ -31,9 +31,6 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
-      if(UnityLoader.SystemInfo.mobile == true){
-        ScreenOrientation.lock('landscape');
-      }
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -120,6 +117,11 @@
         });
       };
       document.body.appendChild(script);
+    </script>
+    <script>
+    if(UnityLoader.SystemInfo.mobile == true){
+        ScreenOrientation.lock('landscape');
+    }
     </script>
   </body>
 </html>
